@@ -245,13 +245,34 @@ span[class="white"] {
 }
 
 .slider {
-  overflow: hidden;
+  display: flex;
+  position: relative;
   width: 100%;
-  max-width: 1920px;
+  overflow: hidden;
+  justify-content: center;
 }
 
-.slider div {
-  position: relative;
+.slides img {
+  width: 100%;
+  display: none;
+}
+
+img.displaySlide { 
+  display: block;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 5rem;
+}
+
+.next {
+  right: 5rem;
 }
 
 .web-page {
