@@ -6,10 +6,16 @@ let intervalId = null;
 
 document.addEventListener("DOMContentLoaded", initializeSlides);
 
+let prevButton = document.getElementById("prev");
+prevButton.addEventListener("click", prevSlide);
+
+let nextButton = document.getElementById("next");
+nextButton.addEventListener("click", nextSlide);
+
 function initializeSlides() {
   if (slides.length > 0) {
     slides[slideIndex].classList.add("displaySlide");
-    setInterval(nextSlide, 5000);
+    intervalId = setInterval(nextSlide, 6000);
   }
 }
 
@@ -34,5 +40,6 @@ function nextSlide() {
 }
 
 function prevSlide() {
-
+  slideIndex--;
+  showSlide(slideIndex);
 }

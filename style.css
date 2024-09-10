@@ -259,6 +259,13 @@ span[class="white"] {
 
 img.displaySlide { 
   display: block;
+  animation-name: slideAnimation;
+  animation-duration: 1.5s;
+}
+
+@keyframes slideAnimation {
+  from {opacity: .5;}
+  to {opacity: 1;}
 }
 
 .slider button {
